@@ -1,5 +1,5 @@
 import { bot } from "../../index.js";
-import { waitForText } from "../../utils/waitForText.js";
+import { waitForText } from "../utils/waitForText.js";
 import { Admin } from "../models/Admin.js";
 
 export async function addNumber(chatId){
