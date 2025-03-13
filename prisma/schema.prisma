@@ -15,9 +15,9 @@ datasource db {
 
 model Users{
   id Int @id @default(autoincrement()) 
-  chatId Int @unique
+  chatId BigInt @unique
   username String
-  admin Boolean? @default(false)
+  isAdmin Boolean? @default(false)
 }
 
 model Numbers{

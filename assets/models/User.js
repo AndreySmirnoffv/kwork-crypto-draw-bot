@@ -1,4 +1,4 @@
-import { prisma } from "../services/prisma"
+import { prisma } from "../services/prisma.js"
 
 export class User{
     async createUser(data){
@@ -6,12 +6,12 @@ export class User{
         return await prisma.users.create({
             data: {
                 chatId,
-                username
+                username,
             }
         }) 
     }
 
-    async checkAdmin(chatId){
+    async findUser(chatId){
         return await prisma.users.findFirst({
             where: { chatId }
         })
